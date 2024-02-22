@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'core',
     'rest_framework',
     'rest_framework.authtoken',
-    'user', 
+    'user',
     'drf_spectacular',
 ]
 
@@ -86,6 +86,9 @@ DATABASES = {
         'NAME': os.environ.get('DB_NAME'),
         'USER': os.environ.get('DB_USER'),
         'PASSWORD': os.environ.get('DB_PASS'),
+        'TEST': {
+            'MIRROR': 'default',
+        },
     }
 }
 
